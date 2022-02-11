@@ -349,7 +349,7 @@ const MKDIR_RETRIES = 5
         `\n${(fileSource as string).replace(
           /^./gm,
           '  $&',
-        ).replace(/export default/g, 'export')}`,
+        ).replace(new RegExp(`export default ${moduleName}`, 'g'), `export { ${moduleName} }`)}`,
       )
     })
     sourceParts.push('}')
