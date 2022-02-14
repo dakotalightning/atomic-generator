@@ -13,7 +13,6 @@
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build && npm run fix",
     "lint": "./node_modules/.bin/tslint -c ./tslint.json -p ./tsconfig.json -t stylish ./lib/**/*.ts",
-    "prepare": "npm run build",
     "build": "./node_modules/.bin/webpack",
     "exec": "node ./cli.js generate",
     "fix": "node ./scripts/fixCliLineEndings.js"
